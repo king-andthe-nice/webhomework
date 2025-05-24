@@ -1,0 +1,198 @@
+/* 建筑艺术页面专用样式 */
+
+.hero-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* 建筑类型分类 */
+.architecture-types {
+    margin: 40px 0;
+}
+
+.type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.architecture-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.architecture-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.architecture-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+}
+
+/* 特色建筑详情 */
+.featured-architecture {
+    margin: 60px 0;
+}
+
+.architecture-highlight {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.architecture-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.architecture-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.architecture-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.architecture-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.features-list {
+    margin-top: 15px;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* 交互式建筑展示 */
+.interactive-showcase {
+    margin: 60px 0;
+}
+
+.slider-container {
+    position: relative;
+    margin-top: 30px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slider-btn {
+    background-color: #8b2a2a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.slider-btn:hover {
+    background-color: #d4a76a;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .architecture-info {
+        flex-direction: column;
+    }
+    
+    .slider-container {
+        height: 300px;
+    }
+} 

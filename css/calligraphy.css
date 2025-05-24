@@ -1,0 +1,327 @@
+/* 文字与书法页面专用样式 */
+
+/* 页面头部 */
+.page-header {
+    background-color: #f2e9d8;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.header-divider {
+    width: 120px;
+    height: 3px;
+    background-color: #8b2a2a;
+    margin: 0 auto 20px;
+}
+
+/* 文字介绍区域 */
+.writing-intro {
+    padding: 50px 0;
+}
+
+.writing-history {
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #d4a76a;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 20px 0;
+    position: relative;
+}
+
+.timeline-item::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    float: left;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    float: right;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+}
+
+.timeline-date {
+    display: inline-block;
+    color: #fff;
+    background-color: #8b2a2a;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 4px solid #8b2a2a;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* 书法风格展示 */
+.calligraphy-styles {
+    padding: 50px 0;
+    background-color: #f9f5ea;
+}
+
+.style-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.style-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.style-card:hover .style-image img {
+    transform: scale(1.05);
+}
+
+.style-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.style-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.style-content {
+    padding: 20px;
+}
+
+.style-content h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #d4a76a;
+    padding-bottom: 10px;
+}
+
+/* 民族文字展示 */
+.ethnic-scripts {
+    padding: 50px 0;
+}
+
+.script-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.script-tab {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #f2e9d8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.script-tab:hover {
+    background-color: #d4a76a;
+    color: #fff;
+}
+
+.script-tab.active {
+    background-color: #8b2a2a;
+    color: #fff;
+}
+
+.script-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.script-content.active {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.script-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.script-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.script-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* 文字互动区 */
+.interactive-section {
+    padding: 50px 0;
+    background-color: #f2e9d8;
+}
+
+.calligraphy-canvas {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    background-color: #fff;
+    border: 2px solid #d4a76a;
+    margin: 30px auto;
+    display: block;
+    cursor: crosshair;
+}
+
+.canvas-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.canvas-btn {
+    padding: 8px 15px;
+    background-color: #8b2a2a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.canvas-btn:hover {
+    background-color: #d4a76a;
+}
+
+/* 民族图腾展示 */
+.totem-gallery {
+    padding: 50px 0;
+}
+
+.gallery-wrapper {
+    margin-top: 30px;
+}
+
+.gallery-container {
+    columns: 3 250px;
+    column-gap: 20px;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 15px;
+    transition: bottom 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    bottom: 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 31px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 60px);
+        float: right !important;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        float: right;
+    }
+    
+    .timeline-item::before {
+        left: 31px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .gallery-container {
+        columns: 2 200px;
+    }
+} 

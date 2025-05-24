@@ -1,0 +1,373 @@
+/* 工艺与器物页面专用样式 */
+
+/* 页面顶部横幅 */
+.hero-banner {
+    background-color: #8b2a2a;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/chinese-pattern.png');
+    background-repeat: repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ffd700;
+}
+
+.banner-content p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* 导航模块 */
+.crafts-nav {
+    padding: 30px 0;
+    background-color: #f2e9d8;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #d4a76a;
+    border-radius: 30px;
+    color: #8b2a2a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #d4a76a;
+    color: #fff;
+}
+
+/* 工艺类别介绍 */
+.crafts-section {
+    padding: 60px 0;
+    scroll-margin-top: 80px;
+}
+
+.crafts-section:nth-child(even) {
+    background-color: #f9f5ea;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #8b2a2a;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-bottom: 3px solid #d4a76a;
+    padding-bottom: 10px;
+}
+
+.section-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* 展示卡片网格 */
+.crafts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.craft-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.craft-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.craft-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.craft-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.craft-card:hover .craft-image img {
+    transform: scale(1.05);
+}
+
+.craft-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #8b2a2a;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.craft-content {
+    padding: 20px;
+}
+
+.craft-content h3 {
+    margin-top: 0;
+    color: #8b2a2a;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.craft-details {
+    margin-top: 15px;
+}
+
+.craft-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.craft-detail-label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #8b2a2a;
+}
+
+/* 特色展示区 */
+.featured-crafts {
+    padding: 80px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.featured-crafts .section-header h2 {
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+.featured-crafts .section-header p {
+    color: #ccc;
+}
+
+.feature-slides {
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.feature-slide {
+    display: none;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.feature-slide.active {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.feature-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.feature-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.feature-info h3 {
+    color: #ffd700;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.feature-info .feature-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.feature-points {
+    margin-top: 20px;
+}
+
+.feature-point {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.point-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #d4a76a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.point-text {
+    flex: 1;
+}
+
+.feature-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.feature-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feature-dot.active {
+    background-color: #ffd700;
+    transform: scale(1.2);
+}
+
+/* 互动内容区 */
+.interactive-section {
+    padding: 70px 0;
+}
+
+.craft-details-container {
+    margin-top: 40px;
+}
+
+.craft-detail-tabs {
+    display: flex;
+    border-bottom: 2px solid #d4a76a;
+    margin-bottom: 20px;
+}
+
+.detail-tab {
+    padding: 12px 25px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.detail-tab:hover {
+    color: #8b2a2a;
+}
+
+.detail-tab.active {
+    color: #8b2a2a;
+    border-bottom-color: #8b2a2a;
+}
+
+.detail-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+.detail-content.active {
+    display: block;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .feature-slide.active {
+        flex-direction: column;
+    }
+    
+    .craft-detail-tabs {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .detail-tab {
+        padding: 8px 15px;
+    }
+} 

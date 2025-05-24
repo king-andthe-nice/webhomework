@@ -1,0 +1,273 @@
+/* 音乐舞蹈页面专用样式 */
+
+/* 顶部横幅区域 */
+.banner {
+    background-color: #8b2a2a;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.banner h1 {
+    color: #ffd700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* 音乐舞蹈介绍区 */
+.intro-section {
+    margin-bottom: 50px;
+}
+
+.intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.intro-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 传统乐器展示 */
+.instruments-section {
+    margin: 50px 0;
+    background-color: #f2e9d8;
+    padding: 40px 0;
+}
+
+.instrument-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+.instrument-card {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.instrument-card:hover {
+    transform: translateY(-10px);
+}
+
+.instrument-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.instrument-info {
+    padding: 15px;
+}
+
+.instrument-info h3 {
+    margin-top: 0;
+    color: #8b2a2a;
+}
+
+.instrument-info .sound-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #d4a76a;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.instrument-info .sound-btn:hover {
+    background-color: #8b2a2a;
+}
+
+/* 舞蹈类型展示 */
+.dance-types-section {
+    margin: 50px 0;
+}
+
+.dance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.dance-item {
+    position: relative;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dance-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dance-item:hover img {
+    transform: scale(1.1);
+}
+
+.dance-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: #fff;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.dance-item:hover .dance-overlay {
+    opacity: 1;
+}
+
+.dance-overlay h3 {
+    margin-top: 0;
+    color: #ffd700;
+}
+
+/* 音乐交互播放器 */
+.music-player-section {
+    margin: 50px 0 0;
+    background-color: #F2E9D8;
+    color: #181818;
+    padding: 40px 0;
+}
+
+.music-player {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #F9F5EA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.player-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.music-info {
+    flex: 1;
+}
+
+.music-info h3 {
+    margin: 0;
+    color: #8B2A2A;
+}
+
+.music-info p {
+    margin: 5px 0 0;
+    color: #aaa;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.control-btn {
+    background-color: #d4a76a;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control-btn.play-btn {
+    width: 60px;
+    height: 60px;
+}
+
+.control-btn:hover {
+    background-color: #8b2a2a;
+}
+
+.progress-container {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #555;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress {
+    background-color: #d4a76a;
+    height: 100%;
+    border-radius: 5px;
+    width: 0;
+    position: absolute;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+    }
+    
+    .banner h1 {
+        font-size: 2rem;
+    }
+    
+    .dance-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+} 
